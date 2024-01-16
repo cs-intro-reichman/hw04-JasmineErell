@@ -2,7 +2,8 @@ public class StringOps
 {
     public static void main(String[] args) 
     {
-         
+         String str = "Hello World";
+         System.out.println(capVowelsLowRest(str));
     }
 
     public static String capVowelsLowRest (String str) 
@@ -33,7 +34,14 @@ public class StringOps
         String temp = "";
         int start = 0;
         int stop = 0;
-        int c = amountOfSpaces(str);
+        int c = 0; 
+        for(int i = 0; i<str.length(); i++)
+        {
+            if(str.charAt(i)== ' ')
+            {
+                c++;
+            }
+        }
         if(c == 0)// if there is no space, return the word in small leters
         {
             res = lowerCase(str);
