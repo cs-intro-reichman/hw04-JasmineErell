@@ -1,38 +1,22 @@
 public class ArrayOps {
     public static void main(String[] args) 
     {
-           
+        int [] array1 = {0,1,2,3,4,6};
+        System.out.println(findMissingInt(array1));
     }
     
-    public static int findMissingInt (int [] array) {
-        int [] B = array;
-        int sum1 = 0 ; 
-        int sum2 = 0 ;
-        int max = 0 ;
-        if (array[0]== 0 && array.length == 1)
-        {
-            return(max+1);
+    public static int findMissingInt (int [] array) 
+    {
+        int n = array.length;
+        int totalSum = n * (n + 1) / 2; 
+        int arrSum = 0;
+        for (int num : array) {
+            arrSum += num;
         }
-        else
-        {
-            for (int i = 0; i<array.length; i++)
-        {
-            sum1 = sum1 + array[i];
-            if(array[i]>max)
-            {
-                max = array[i] ;
-            }
-        }
-        for(int j = 0; j<array.length; j++)
-        {
-            sum2 = sum2 + j ; 
-            B[j] = j; 
-        }
-        sum2 = sum2 + max ; 
-        }
-        return sum2;
+        return totalSum - arrSum;
     }
 
+    
     public static int secondMaxValue(int [] array) {
         int max1 = 0;
         int max2 = 0;
