@@ -2,8 +2,14 @@ public class StringOps
 {
     public static void main(String[] args) 
     {
+<<<<<<< HEAD
          String str = "Hello World";
          System.out.println(capVowelsLowRest(str));
+=======
+        String str = "MMMM";
+        char a = 'M';
+        System.out.println(allIndexOf(str, a)); 
+>>>>>>> e40cee4983f533ff634dacc3138d0d43ce2ff2c7
     }
 
     public static String capVowelsLowRest (String str) 
@@ -34,6 +40,7 @@ public class StringOps
         String temp = "";
         int start = 0;
         int stop = 0;
+<<<<<<< HEAD
         int c = 0; 
         for(int i = 0; i<str.length(); i++)
         {
@@ -42,6 +49,9 @@ public class StringOps
                 c++;
             }
         }
+=======
+        int c = amountOfSpaces(str);
+>>>>>>> e40cee4983f533ff634dacc3138d0d43ce2ff2c7
         if(c == 0)// if there is no space, return the word in small leters
         {
             res = lowerCase(str);
